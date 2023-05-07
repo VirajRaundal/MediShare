@@ -85,7 +85,7 @@ export default function PlacesFormPage() {
       <AccountNav />
       <form onSubmit={savePlace}>
         {preInput('Title', 'Name of the medicine.')}
-        <input type="text" value={title} onChange={ev => setTitle(ev.target.value)} placeholder="title, for example: My lovely apt"/>
+        <input type="text" value={title} onChange={ev => setTitle(ev.target.value)} placeholder="title, for example: Dolo 650"/>
         {preInput('Address', 'Where should we pick up the medicine from?')}
         <input type="text" value={address} onChange={ev => setAddress(ev.target.value)}placeholder="address"/>
         {preInput('Photos','will be used to verify the authenticity of the medicine')}
@@ -101,14 +101,14 @@ export default function PlacesFormPage() {
         {preInput('Pickup time','Select a range of when we can come to pick up the medicine.')}
         <div className="grid gap-2 grid-cols-2 md:grid-cols-4">
           <div>
-            <h3 className="mt-2 -mb-1">Check in time</h3>
+            <h3 className="mt-2 -mb-1">Start time</h3>
             <input type="text"
                    value={checkIn}
                    onChange={ev => setCheckIn(ev.target.value)}
                    placeholder="14"/>
           </div>
           <div>
-            <h3 className="mt-2 -mb-1">Check out time</h3>
+            <h3 className="mt-2 -mb-1">End time</h3>
             <input type="text"
                    value={checkOut}
                    onChange={ev => setCheckOut(ev.target.value)}
